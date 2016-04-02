@@ -1,12 +1,27 @@
 package com.medschedulr.medschedulr;
 
+import android.content.ContentResolver;
+import android.net.Uri;
 import android.provider.BaseColumns;
 
-public class MedContract {
+public final class MedContract {
 
     private MedContract() {}
 
+    public static final String AUTHORITY = "com.medschedulr.medschedulr.provider";
+    public static final String SCHEME = "content://";
+
+    public static final Uri CONTENT_URI = Uri.parse(SCHEME + AUTHORITY);
+
     public static final class MedTable implements BaseColumns {
+
+        public static final Uri CONTENT_URI = Uri.withAppendedPath(MedContract.CONTENT_URI, "meds");
+
+        public static final String CONTENT_LIST_TYPE = ContentResolver.CURSOR_DIR_BASE_TYPE +
+                "vnd.medschedulr.medschedulr.meds";
+
+        public static final String CONTENT_ID_TYPE = ContentResolver.CURSOR_ITEM_BASE_TYPE +
+                "vnd.medschedulr.medschedulr.meds";
 
         public static final String TBL_NAME = "medTable";
 
@@ -19,13 +34,21 @@ public class MedContract {
 
         public static final String CREATE_TABLE = "CREATE TABLE " +
                 TBL_NAME + " (" +
-                _ID + " PRIMARY KEY AUTOINCREMENT, " +
-                COL_MEDICATION + " NOT NULL, " +
-                COL_QUANTITY + ", " +
-                COL_TYPE + ", " +
-                COL_FREQUENCY + ", " +
-                COL_SPAN + ", " +
-                COL_PRIORITY +
+                _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, \n" +
+                COL_MEDICATION + " TEXT NOT NULL, \n" +
+                COL_QUANTITY + " REAL, \n" +
+                COL_TYPE + " TEXT, \n" +
+                COL_FREQUENCY + " TEXT, \n" +
+                COL_SPAN + " TEXT, \n" +
+                COL_PRIORITY + " TEXT\n"+
                 " );";
+
+        public static final String DELETE_TABLE = "DROP TABLE IF EXISTS " +
+                TBL_NAME + ";";
+
+        public static final String[] PROJECTION_ALL = { _ID, COL_MEDICATION, COL_QUANTITY,
+            COL_TYPE, COL_FREQUENCY, COL_SPAN, COL_PRIORITY };
+
+        public static final String DEFAULT_SORT_ORDER = COL_PRIORITY + " ASC";
     }
 }

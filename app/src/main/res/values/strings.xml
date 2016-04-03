@@ -1,10 +1,26 @@
 <resources>
     <string name="app_name">medSchedulR</string>
     <string name="medlistfragment_empty">Add a Medication</string>
+
     <string name="string_medication">Abraxane</string>
-    <string name="string_quantity">2 Pills</string>
+    <string name="string_multiplier">2</string>
+    <string name="string_unit">Pills</string>
     <string name="string_priority">Medium</string>
+
     <string name="string_schedule">SCHEDULE</string>
-    
-    <string name="string_timesper"
+
+    <string name="string_edit_medication">Enter Medication</string>
+    <string name="string_edit_multiplier">2.0</string>
+    <string name="string_edit_unit">pills</string>
+    <string name="string_edit_priority">Enter Priority</string>
+
+    <string-array name="daysoftheweek_array">
+        <item>S</item>
+        <item>M</item>
+        <item>T</item>
+        <item>W</item>
+        <item>T</item>
+        <item>F</item>
+        <item>S</item>
+    </string-array>
 </resources>

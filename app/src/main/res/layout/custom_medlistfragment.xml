@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center|bottom"
-        android:id="@+id/id_quantityt"
-        android:textColor="@string/"/>
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/id_medication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:textSize="24sp"
+            android:text="@string/string_medication" />
+
+        <TextView
+            android:id="@+id/id_priority"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:textSize="24sp"
+            android:text="@string/string_priority" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/id_multiplier"
+            android:paddingEnd="5dp"
+            android:paddingStart="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:textSize="20sp"
+            android:text="@string/string_multiplier" />
+
+        <TextView
+            android:id="@+id/id_unit"
+            android:layout_toEndOf="@+id/id_multiplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:textSize="20sp"
+            android:text="@string/string_unit" />
+
+    </RelativeLayout>
+
 </LinearLayout>

@@ -25,7 +25,12 @@ public class MedListFragment extends ListFragment implements LoaderManager.Loade
         super.onActivityCreated(savedInstanceState);
         setEmptyText(getString(R.string.medlistfragment_empty));
 
-        mAdapter = new SimpleCursorAdapter(getActivity(), android.R.layout.simple_list_item_1, null, )
+        String[] from = { MedContract.MedTable.COL_MEDICATION, MedContract.MedTable.COL_PRIORITY,
+                MedContract.MedTable.COL_MULTIPLIER, MedContract.MedTable.COL_UNIT };
+        int[] to = { R.id.id_medication, R.id.id_priority, R.id.id_multiplier, R.id.id_unit };
+
+        mAdapter = new SimpleCursorAdapter(getActivity(), R.layout.custom_medlistfragment, null,
+                from, to, 0);
     }
 
     @Override

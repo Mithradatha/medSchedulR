@@ -10,7 +10,6 @@ Touch to call contact.
 
 Schedule Help:
 Click the "Add Medication' button to add a new medication.
-Test TEst
 
 Settings Help:
 Touch priority to change priority setting

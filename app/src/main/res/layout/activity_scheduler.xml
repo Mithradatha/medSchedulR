@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:layout_above="@+id/id_frame_medlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    </LinearLayout>
+
+    <FrameLayout android:id="@+id/id_frame_medlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <fragment
+            android:id="@+id/id_medlist_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.medschedulr.medschedulr.MedListFragment" />
+    </FrameLayout>
+
+</RelativeLayout>

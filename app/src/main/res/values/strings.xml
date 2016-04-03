@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">medSchedulR</string>
+    <string name="medlistfragment_empty">Add a Medication</string>
+    <string name="string_medication">Abraxane</string>
+    <string name="string_quantity">2 Pills</string>
+    <string name="string_priority">Medium</string>
+    <string name="string_schedule">SCHEDULE</string>
+    
+    <string name="string_timesper"
 </resources>

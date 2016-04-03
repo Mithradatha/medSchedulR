@@ -14,6 +14,8 @@
     <string name="string_edit_unit">pills</string>
     <string name="string_edit_priority">Enter Priority</string>
 
+    <string name="string_addmed">ADD</string>
+
     <string-array name="daysoftheweek_array">
         <item>S</item>
         <item>M</item>

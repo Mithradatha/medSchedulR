@@ -5,12 +5,12 @@
     android:layout_height="match_parent">
 
     <LinearLayout android:id="@+id/id_temp_input"
-        android:layout_above="@+id/id_frame_medlist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="10dp">
 
         <EditText
+            android:id="@+id/id_edit_medication"
             android:inputType="text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -19,6 +19,7 @@
             android:layout_gravity="center|bottom"/>
 
         <EditText
+            android:id="@+id/id_edit_priority"
             android:inputType="text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,6 +28,7 @@
             android:layout_gravity="center|bottom"/>
 
         <EditText
+            android:id="@+id/id_edit_multiplier"
             android:inputType="text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,6 +37,7 @@
             android:layout_gravity="center|bottom"/>
 
         <EditText
+            android:id="@+id/id_edit_unit"
             android:inputType="text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,10 +47,25 @@
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:id="@+id/id_addmed"
+        android:layout_below="@+id/id_temp_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="10"
+            android:text="@string/string_addmed"
+            android:onClick="onAddMed"/>
+    </RelativeLayout>
+
     <FrameLayout android:id="@+id/id_frame_medlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/id_temp_input">
+        android:layout_below="@+id/id_addmed">
         <fragment
             android:id="@+id/id_medlist_layout"
             android:layout_width="match_parent"

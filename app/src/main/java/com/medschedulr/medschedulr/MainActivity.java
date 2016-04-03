@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onSchedule(View view) {
-        Intent intent = new Intent(this, )
+        Intent intent = new Intent(this, SchedulerActivity.class);
+        startActivity(intent);
     }
 }

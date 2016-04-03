@@ -18,75 +18,131 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <GridLayout
+        android:layout_below="@+id/id_toolbar_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:useDefaultMargins="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:columnCount="2"
+        android:rowCount="2">
 
-    <ImageButton
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:id="@+id/contactButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <ImageButton
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:id="@+id/emergencyButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <ImageButton
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:id="@+id/scheduleButton"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/ContactText"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:elevation="4dp"
+                android:onClick="onContacts"
+                android:background="@drawable/ic_medschedulrcontacts"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/contactButton" />
 
-    <ImageButton
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:id="@+id/settingsButton"
-        android:layout_alignTop="@+id/scheduleButton"
-        android:layout_alignParentEnd="true" />
+            <TextView
+                android:layout_below="@+id/contactButton"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/string_contacts"
+                android:id="@+id/ContactText"
+                android:gravity="center" />
 
-    <TextView
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Contacts"
-        android:id="@+id/ContactText"
-        android:layout_below="@+id/contactButton"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/contactButton"
-        android:gravity="center" />
+            </RelativeLayout>
 
-    <TextView
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Emergency"
-        android:id="@+id/EmergencyText"
-        android:gravity="center"
-        android:layout_below="@+id/emergencyButton"
-        android:layout_alignParentEnd="true" />
+        </FrameLayout>
 
-    <TextView
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Schedule"
-        android:id="@+id/ScheduleText"
-        android:gravity="center"
-        android:layout_below="@+id/scheduleButton"
-        android:layout_alignParentStart="true" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Settings"
-        android:id="@+id/SettingsText"
-        android:gravity="center"
-        android:layout_alignTop="@+id/ScheduleText"
-        android:layout_alignEnd="@+id/settingsButton" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+
+            <Button
+                android:elevation="4dp"
+                android:onClick="onEmergency"
+                android:background="@drawable/ic_medschedulr911"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/emergencyButton" />
+
+            <TextView
+                android:layout_below="@+id/emergencyButton"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/string_emergency"
+                android:id="@+id/EmergencyText"
+                android:gravity="center" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <Button
+                android:elevation="4dp"
+                android:onClick="onSchedule"
+                android:background="@drawable/ic_medschedulrmeds"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/scheduleButton" />
+            <TextView
+                android:layout_below="@+id/scheduleButton"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/string_schedule"
+                android:id="@+id/ScheduleText"
+                android:gravity="center" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <Button
+                android:elevation="4dp"
+                android:onClick="onSettings"
+                android:background="@drawable/ic_medschedulrsettings"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/settingsButton" />
+
+            <TextView
+                android:layout_below="@+id/settingsButton"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/string_settings"
+                android:id="@+id/SettingsText"
+                android:gravity="center" />
+
+            </RelativeLayout>
+        </FrameLayout>
+    </GridLayout>
 </RelativeLayout>

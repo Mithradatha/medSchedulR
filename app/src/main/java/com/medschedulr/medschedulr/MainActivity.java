@@ -20,6 +20,18 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.string_title_main);
     }
 
+    public void onContacts(View vew) {
+
+    }
+
+    public void onEmergency(View view) {
+
+    }
+
+    public void onSettings(View view) {
+
+    }
+
     public void onSchedule(View view) {
         Intent intent = new Intent(this, SchedulerActivity.class);
         startActivity(intent);

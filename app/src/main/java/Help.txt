@@ -1,0 +1,16 @@
+Main Help:
+Click the Contacts button to view or edit you five favourite contacts.
+Click the Emergency button to dial 911.
+Click the Schedule button to add or view medications
+Click the Settings button to change notification settings.
+
+Contacts Help:
+Hold to add or edit contact.
+Touch to call contact.
+
+Schedule Help:
+Click the "Add Medication' button to add a new medication.
+
+
+Settings Help:
+Touch priority to change priority setting

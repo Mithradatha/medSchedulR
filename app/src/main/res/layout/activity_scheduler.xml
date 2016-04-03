@@ -2,70 +2,41 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout android:id="@+id/id_temp_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="10dp">
-
-        <EditText
-            android:id="@+id/id_edit_medication"
-            android:inputType="text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/string_edit_medication"
-            android:layout_weight="0.2"
-            android:layout_gravity="center|bottom"/>
-
-        <EditText
-            android:id="@+id/id_edit_priority"
-            android:inputType="text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/string_edit_priority"
-            android:layout_weight="0.2"
-            android:layout_gravity="center|bottom"/>
-
-        <EditText
-            android:id="@+id/id_edit_multiplier"
-            android:inputType="text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/string_edit_multiplier"
-            android:layout_weight="0.2"
-            android:layout_gravity="center|bottom"/>
-
-        <EditText
-            android:id="@+id/id_edit_unit"
-            android:inputType="text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/string_edit_unit"
-            android:layout_weight="0.2"
-            android:layout_gravity="center|bottom"/>
-
-    </LinearLayout>
+    android:layout_height="match_parent"
+    android:padding="4dp">
 
     <RelativeLayout
-        android:id="@+id/id_addmed"
-        android:layout_below="@+id/id_temp_input"
+        android:id="@+id/id_add_layout"
+        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
 
         <Button
+            android:id="@+id/id_addmed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minEms="10"
+            android:gravity="center"
+            android:minHeight="60dp"
+            android:minWidth="200dp"
             android:text="@string/string_addmed"
+            android:textAllCaps="false"
             android:onClick="onAddMed"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_float"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp" />
     </RelativeLayout>
 
     <FrameLayout android:id="@+id/id_frame_medlist"
+        android:padding="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/id_addmed">
+        android:layout_below="@+id/id_add_layout">
         <fragment
             android:id="@+id/id_medlist_layout"
             android:layout_width="match_parent"

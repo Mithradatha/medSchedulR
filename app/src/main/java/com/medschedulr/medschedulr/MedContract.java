@@ -37,16 +37,16 @@ public final class MedContract {
 
         public static final String CREATE_TABLE = "CREATE TABLE " +
                 TBL_NAME + " (" +
-                _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, \n" +
-                COL_MEDICATION + " TEXT NOT NULL, \n" +
-                COL_MULTIPLIER + " INTEGER, \n" +
-                COL_UNIT + " TEXT, \n" +
-                COL_DAYSOFWEEK + " TEXT, \n" +
-                COL_FREQUENCY + " TEXT, \n" +
-                COL_TIMES + " INTEGER, \n" +
-                COL_STARTDATE + " TEXT, \n" +
-                COL_ENDDATE + " TEXT, \n" +
-                COL_PRIORITY + " TEXT\n"+
+                _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COL_MEDICATION + " TEXT, " +
+                COL_MULTIPLIER + " INTEGER, " +
+                COL_UNIT + " TEXT, " +
+                COL_DAYSOFWEEK + " TEXT, " +
+                COL_FREQUENCY + " TEXT, " +
+                COL_TIMES + " INTEGER, " +
+                COL_STARTDATE + " TEXT, " +
+                COL_ENDDATE + " TEXT, " +
+                COL_PRIORITY + " TEXT"+
                 " );";
 
         public static final String DELETE_TABLE = "DROP TABLE IF EXISTS " +

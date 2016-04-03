@@ -4,9 +4,136 @@
     android:layout_height="match_parent"
     tools:context="com.medschedulr.medschedulr.DetailsDialogFragment">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_gravity="left|top">
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:id="@+id/button2"
+            android:layout_marginTop="18dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/button3" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:id="@+id/button3"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_alignTop="@+id/button2"
+            android:layout_toStartOf="@+id/button4" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:id="@+id/button4"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_alignTop="@+id/button3"
+            android:layout_toStartOf="@+id/button5" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:id="@+id/button5"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_alignTop="@+id/button4"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:id="@+id/button6"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_alignTop="@+id/button5"
+            android:layout_toEndOf="@+id/button5" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:id="@+id/button7"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_alignTop="@+id/button6"
+            android:layout_toEndOf="@+id/button6" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="Su"
+            android:id="@+id/button8"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_alignTop="@+id/button7"
+            android:layout_toEndOf="@+id/button7" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="Time"
+            android:id="@+id/button"
+            android:onClick="showTimePickerDialog"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_below="@+id/button2"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="51dp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Start Date"
+            android:id="@+id/buttonStart"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/button"
+            android:onClick="showDatePickerDialog"
+            android:layout_marginBottom="60dp"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="End Date"
+            android:id="@+id/buttonEnd"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/button"
+            android:onClick="showDatePickerDialog"
+            android:layout_marginBottom="10dp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Span: "
+            android:id="@+id/textView"
+            android:layout_above="@+id/buttonStart"
+            android:layout_alignParentStart="true"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=""
+            android:id="@+id/Counter"
+            android:layout_below="@+id/button4"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" />
+
+    </RelativeLayout>
 
 </FrameLayout>

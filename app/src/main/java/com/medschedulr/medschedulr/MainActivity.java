@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onContacts(View vew) {
-
+        Intent intent = new Intent(this, ContactsActivity.class);
+        startActivity(intent);
     }
 
     public void onEmergency(View view) {

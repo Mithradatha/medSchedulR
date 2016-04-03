@@ -1,10 +1,10 @@
 package com.medschedulr.medschedulr;
 
-import android.app.Activity;
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-public class DetailsDialogFragment extends Activity {
+public class DetailsDialogFragment extends AppCompatActivity {
 
     private static final int loaderID = 2;
 

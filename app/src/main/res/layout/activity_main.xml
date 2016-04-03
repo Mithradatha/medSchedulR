@@ -18,12 +18,75 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/string_schedule"
-        android:id="@+id/id_schedule"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onSchedule"/>
+
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/contactButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/emergencyButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/scheduleButton"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/ContactText"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/settingsButton"
+        android:layout_alignTop="@+id/scheduleButton"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Contacts"
+        android:id="@+id/ContactText"
+        android:layout_below="@+id/contactButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/contactButton"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Emergency"
+        android:id="@+id/EmergencyText"
+        android:gravity="center"
+        android:layout_below="@+id/emergencyButton"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Schedule"
+        android:id="@+id/ScheduleText"
+        android:gravity="center"
+        android:layout_below="@+id/scheduleButton"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Settings"
+        android:id="@+id/SettingsText"
+        android:gravity="center"
+        android:layout_alignTop="@+id/ScheduleText"
+        android:layout_alignEnd="@+id/settingsButton" />
+
 </RelativeLayout>

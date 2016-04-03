@@ -18,6 +18,9 @@
         <activity android:name=".SchedulerActivity"
             android:parentActivityName=".MainActivity">
         </activity>
+        <activity android:name=".DetailsDialogActivity"
+            android:parentActivityName=".SchedulerActivity">
+        </activity>
         <provider
             android:authorities="com.medschedulr.medschedulr.provider"
             android:name=".MedProvider"

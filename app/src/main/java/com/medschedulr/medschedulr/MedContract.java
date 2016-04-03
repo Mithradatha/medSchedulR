@@ -42,8 +42,8 @@ public final class MedContract {
                 COL_MULTIPLIER + " INTEGER, " +
                 COL_UNIT + " TEXT, " +
                 COL_DAYSOFWEEK + " TEXT, " +
-                COL_FREQUENCY + " TEXT, " +
-                COL_TIMES + " INTEGER, " +
+                COL_FREQUENCY + " INTEGER, " +
+                COL_TIMES + " TEXT, " +
                 COL_STARTDATE + " TEXT, " +
                 COL_ENDDATE + " TEXT, " +
                 COL_PRIORITY + " TEXT"+

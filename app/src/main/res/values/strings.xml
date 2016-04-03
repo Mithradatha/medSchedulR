@@ -3,6 +3,7 @@
 
     <string name="string_title_scheduler">Medicine Schedule</string>
     <string name="string_title_main">medSchedulR</string>
+    <string name="string_title_detailsdialog">Medication Details</string>
 
     <string name="string_contacts">Contacts</string>
     <string name="string_emergency">Emergency</string>

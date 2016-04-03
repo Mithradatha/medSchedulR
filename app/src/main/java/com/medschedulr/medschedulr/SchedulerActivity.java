@@ -1,5 +1,6 @@
 package com.medschedulr.medschedulr;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +23,8 @@ public class SchedulerActivity extends AppCompatActivity {
     }
 
     public void onAddMed(View view) {
-
+        Intent intent = new Intent(this, DetailsDialogActivity.class);
+        startActivity(intent);
     }
 
     @Override

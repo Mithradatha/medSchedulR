@@ -1,10 +1,24 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.medschedulr.medschedulr.DetailsDialogFragment">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/id_toolbar_detailsdialog"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:minHeight="70dp"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
     <RelativeLayout
+        android:layout_below="@+id/id_toolbar_detailsdialog"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="left|top">
@@ -79,9 +93,24 @@
             android:layout_alignTop="@+id/id_friday"
             android:layout_toEndOf="@+id/id_friday" />
 
-        <fragment
+        <EditText
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_saturday"
+            android:minEms="10"
+            android:hint="Enter Medication"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/id_medication_item">
+            <requestFocus/>
+        </EditText>
+
+        <fragment
+            android:id="@+id/id_timelist"
+            android:layout_below="@+id/id_medication_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:name="com.medschedulr.medschedulr.TimeListFragment">
         </fragment>
 
         <Button
@@ -89,9 +118,7 @@
             android:layout_height="50dp"
             android:text="Start Date"
             android:id="@+id/id_start_date"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/id_time"
-            android:layout_marginBottom="60dp"
+            android:layout_below="@+id/id_timelist"
             android:gravity="center" />
 
         <Button
@@ -99,20 +126,10 @@
             android:layout_height="50dp"
             android:text="End Date"
             android:id="@+id/id_end_date"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/id_time"
+            android:layout_below="@+id/id_start_date"
             android:layout_marginBottom="10dp"
-            android:gravity="center" />
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/id_counter"
-            android:layout_below="@+id/id_tuesday"
-            android:layout_centerHorizontal="true"
             android:gravity="center" />
 
     </RelativeLayout>
 
-</FrameLayout>
+</RelativeLayout>

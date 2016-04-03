@@ -12,73 +12,72 @@
         <Button
             android:layout_width="45dp"
             android:layout_height="wrap_content"
-            android:text="M"
-            android:id="@+id/button2"
-            android:layout_marginTop="18dp"
+            android:text="S"
+            android:id="@+id/Sunday"
             android:padding="10dp"
             android:gravity="center"
             android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/button3" />
+            android:layout_toStartOf="@+id/Monday" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:id="@+id/Monday"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_alignTop="@+id/Sunday"
+            android:layout_toStartOf="@+id/Tuesday" />
 
         <Button
             android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:text="T"
-            android:id="@+id/button3"
+            android:id="@+id/Tuesday"
             android:padding="10dp"
             android:gravity="center"
-            android:layout_alignTop="@+id/button2"
-            android:layout_toStartOf="@+id/button4" />
+            android:layout_alignTop="@+id/Monday"
+            android:layout_toStartOf="@+id/Wednesday" />
 
         <Button
             android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:text="W"
-            android:id="@+id/button4"
+            android:id="@+id/Wednesday"
             android:padding="10dp"
             android:gravity="center"
-            android:layout_alignTop="@+id/button3"
-            android:layout_toStartOf="@+id/button5" />
-
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="wrap_content"
-            android:text="T"
-            android:id="@+id/button5"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_alignTop="@+id/button4"
+            android:layout_alignTop="@+id/Tuesday"
             android:layout_centerHorizontal="true" />
 
         <Button
             android:layout_width="45dp"
             android:layout_height="wrap_content"
-            android:text="F"
-            android:id="@+id/button6"
+            android:text="T"
+            android:id="@+id/Thursday"
             android:padding="10dp"
             android:gravity="center"
-            android:layout_alignTop="@+id/button5"
-            android:layout_toEndOf="@+id/button5" />
+            android:layout_alignTop="@+id/Wednesday"
+            android:layout_toEndOf="@+id/Wednesday" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:id="@+id/Friday"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_alignTop="@+id/Thursday"
+            android:layout_toEndOf="@+id/Thursday" />
 
         <Button
             android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:text="S"
-            android:id="@+id/button7"
+            android:id="@+id/Saturday"
             android:padding="10dp"
             android:gravity="center"
-            android:layout_alignTop="@+id/button6"
-            android:layout_toEndOf="@+id/button6" />
-
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="wrap_content"
-            android:text="Su"
-            android:id="@+id/button8"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_alignTop="@+id/button7"
-            android:layout_toEndOf="@+id/button7" />
+            android:layout_alignTop="@+id/Friday"
+            android:layout_toEndOf="@+id/Friday" />
 
         <Button
             android:layout_width="fill_parent"
@@ -88,9 +87,8 @@
             android:onClick="showTimePickerDialog"
             android:gravity="center"
             android:textSize="20dp"
-            android:layout_below="@+id/button2"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="51dp" />
+            android:layout_below="@+id/Counter"
+            android:layout_alignParentStart="true" />
 
         <Button
             android:layout_width="150dp"
@@ -128,9 +126,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text=""
             android:id="@+id/Counter"
-            android:layout_below="@+id/button4"
+            android:layout_below="@+id/Tuesday"
             android:layout_centerHorizontal="true"
             android:gravity="center" />
 
